@@ -58,16 +58,3 @@ class User(AbstractUser):
             ):
                 raise IntegrityError("Phone number already exists")
         super().save(*args, **kwargs)
-
-    @property
-    def get_total_amount_of_donations(self):
-        return (
-            self.donation_transactions.filter(is_complete=True).aggregate(
-                models.Sum("amount")
-            )["amount__sum"]
-            or 0
-        )
-
-    @property
-    def get_total_count_of_donations(self):
-        return self.donation_transactions.filter(is_complete=True).count()

@@ -33,7 +33,7 @@ def send_password_reset_email(user):
         user.save()
 
         # send email
-        subject = f"{settings.APP_NAME} Bağışçı Hesabınız İçin Parola Sıfırlama Formu"
+        subject = f"{settings.APP_NAME} Hesabınız İçin Parola Sıfırlama Formu"
 
         # generate url
         protocol = "https" if settings.DEBUG == False else "http"
@@ -60,12 +60,12 @@ def send_password_reset_email(user):
 def send_password_reset_success_email(user):
     # send email
     try:
-        subject = f"{settings.APP_NAME} Bağışçı Hesabınız Hakkında Bilgilendirme"
+        subject = f"{settings.APP_NAME} Hesabınız Hakkında Bilgilendirme"
         message = render_to_string(
             "mail_templates/message.html",
             {
                 "user": user,
-                "message": f"Bağışçı hesabınızın parolası güncellendi. Eğer işlem size ait değilse lütfen {settings.APP_NAME} ile iletişime geçin.",
+                "message": f"Hesabınızın parolası güncellendi. Eğer işlem size ait değilse lütfen {settings.APP_NAME} ile iletişime geçin.",
                 "app_name": settings.APP_NAME,
             },
         )
