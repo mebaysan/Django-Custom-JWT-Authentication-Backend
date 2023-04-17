@@ -23,3 +23,7 @@
 - `python manage.py load_countries_states`
   - Loads countries and states data by parsing a JSON from web.
   - You can inspect the [`load_countries_states.py`](src/apps/management/management/commands/load_countries_states.py) file.
+
+# Postman
+
+You can easily import [Postman collection](postman/endpoints-collection.json) into Postman and test the project.
