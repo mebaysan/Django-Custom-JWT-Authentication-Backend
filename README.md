@@ -1,6 +1,7 @@
 # Django Custom JWT Authentication with Username or Phone Number
 
 - You can check my article about this topic on Medium by clicking on [here](https://medium.com/codex/django-rest-framework-custom-jwt-authentication-backend-17bbd178b4fd).
+- [Also it is available on Youtube :)](https://youtu.be/goTIo3g4gGQ)
 
 # Structure
 
