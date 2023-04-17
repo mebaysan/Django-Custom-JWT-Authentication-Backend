@@ -28,3 +28,5 @@
 # Postman
 
 You can easily import [Postman collection](postman/endpoints-collection.json) into Postman and test the project.
+
+![](assets/baysansoft.com.gif)
